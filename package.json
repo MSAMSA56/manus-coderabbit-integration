@@ -1,0 +1,24 @@
+{
+  "name": "manus-coderabbit-integration",
+  "version": "1.0.0",
+  "description": "مشروع تكامل بين Manus AI و CodeRabbit MCP Server لمراجعة الكود التلقائية",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "manus",
+    "coderabbit",
+    "mcp",
+    "code-review",
+    "ai",
+    "automation"
+  ],
+  "author": "MSAMSA56",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {}
+}
