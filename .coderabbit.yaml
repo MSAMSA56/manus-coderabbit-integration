@@ -1,0 +1,47 @@
+# CodeRabbit Configuration File
+# This file configures automatic code reviews for Manus-CodeRabbit integration
+
+reviews:
+  # Path-specific instructions
+  path_instructions:
+    - path: "*.ts"
+      instructions: |
+        Review TypeScript code for:
+        - Type safety
+        - Null safety
+        - Performance optimizations
+    
+    - path: "tests/**"
+      instructions: |
+        Ensure tests have:
+        - Proper coverage
+        - Edge cases handling
+        - Clear assertions
+  
+  # Custom rules
+  custom_rules:
+    - rule: "no-console-logs"
+      pattern: "console\\.(log|warn|error)"
+      severity: "warning"
+      message: "Remove console logs from production code"
+    
+    - rule: "require-error-handling"
+      pattern: "async.*await"
+      severity: "error"
+      message: "Async functions should have try-catch"
+  
+  # Tool configuration
+  tools:
+    ast_grep:
+      essential_rules: true
+      rule_dirs:
+        - "custom-rules"
+      packages:
+        - "org/security-rules"
+
+# Code generation settings
+code_generation:
+  docstrings:
+    path_instructions:
+      - path: "*.ts"
+        instructions: "Generate JSDoc comments for all functions"
